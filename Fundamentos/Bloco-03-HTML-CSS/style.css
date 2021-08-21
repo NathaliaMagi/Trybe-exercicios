@@ -41,5 +41,14 @@ h4{
     
 }
 
+.dados{
+    margin: 15px 110px;
+    font-weight: bolder;
+}
+
+li{
+    list-style: square;
+    margin: 15px;
+}
 
 
