@@ -1,0 +1,49 @@
+#area-cabecalho{
+    background-color: coral;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#area-menu{
+    background-color: blanchedalmond;
+
+}
+
+.nav-links li{
+    display: inline-block;
+    width:180px;
+    border:1px blue solid;
+    padding: 15px; 
+    margin-right: 5px;  
+
+}
+
+#area-fatos{
+    background-color: darkgray;
+    width: 1420px;
+    float: left;
+    margin-top: 20px;
+  
+}
+
+#area-fatos h2{
+    padding-left: 50px;
+}
+#area-lateral{
+    background-color: gold;
+    width: 400px;
+    float: right;
+    margin-top: 20px;
+}
+
+#area-rodape{
+    background-color: darkkhaki;
+    position: fixed;
+    bottom: 0;
+    width: 99%;
+
+}
+
+.clear{
+    clear: both;
+}
