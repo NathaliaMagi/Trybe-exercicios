@@ -1,0 +1,106 @@
+<!-- HTML SEMÂNTICO 
+- Reforça o significado da informação na página e não apenas define sua estrutura e apresentação
+- Padronização da criação de páginas web
+- Torna ela mais acessível
+- Legibidade
+
+------------------ TAGS SEMÂNTICAS -------------------
+<header> CABEÇALHO</header>
+<nav> LINKS DE NAVEGAÇAÕ </nav>
+<main>Agrupa todo o conteúdo abaixo dos links de navegação
+    <article>ARTIGO
+        Conteúdo auto contido,O conteúdo que é apresentado dentro dele possui sentido entre ele
+        <section> SEÇÃO</section>
+    </article>
+
+    <aside> BARRA LATERAL</aside>
+    <footer>RODAPÉ</footer>
+
+</main> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bloco - inline</title>
+
+    <style type="text/css">
+         h1 {
+        text-align: center;
+      }
+
+      .first {
+        background-color: rgb(235, 200, 84);
+        font-size: 20px;
+        height: 50px;
+        text-align: center;
+        width: 200px;
+        list-style: none;
+        margin: auto;
+      }
+
+      .second {
+        background-color: rgb(219, 219, 219);
+        font-size: 20px;
+        height: 50px;
+        text-align: center;
+        width: 300px;
+        list-style: none;
+        display: inline-block;
+        margin-left: 130px;
+       
+      }
+
+      .third {
+        background-color: rgb(170, 142, 106);
+        font-size: 20px;
+        height: 50px;
+        text-align: center;
+        width: 300px;
+        list-style: none;
+        display: inline-block;
+        margin: auto;
+      }
+
+      h3{
+          text-align: center;
+      }
+
+       .listas li {
+          list-style: none;
+          display: inline;
+          text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hackathon Results</h1>
+    </header>
+    
+    <section>
+        <ul>
+            <li class="first">1° - Equipe 1</li>
+            <li class="second">2° - Equipe 2</li>
+            <li class="third">3° - Equipe 3</li>
+        </ul>
+    </section>
+
+    <section class="listas">
+        <h3>Premiação Primeiro Lugar:</h3>
+      <ul>
+        <li>| R$ 1000,00 por integrante da equipe |</li>
+        <li>| Bootcamp de 2 meses com possibilidade de contratação |</li>
+      </ul>
+      <h3>Premiação Segundo Lugar:</h3>
+      <ul>
+        <li>| R$ 600,00 por integrante da equipe |</li>
+        <li>| Participação no processo seletivo para o Bootcamp |</li>
+      </ul>
+      <h3>Premiação Terceiro Lugar:</h3>
+      <ul>
+        <li>| R$ 300,00 por integrante da equipe |</li>
+        <li>| Participação no processo seletivo para o Bootcamp |</li>
+      </ul>
+    </section>
+</body>
+</html>
