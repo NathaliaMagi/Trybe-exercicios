@@ -57,8 +57,77 @@
   </head>
   <body id="corpo">
     <script>
-        let newH1 = document.createElement('h1').innerText ="Exercício 5.2 - JavaScript DOM";
-        document.body.appendChild(newH1);
+        //------------------------------------------------------- 1
+        let escritaH1 = document.createElement('h1');
+        escritaH1.innerText = "Exercício 5.2 - JavaScript DOM";
+        document.getElementById("corpo").appendChild(escritaH1);
+
+        //-------------------------------------------------------- 2
+        let tagMain = document.createElement('main');
+        tagMain.className = 'main-content';
+        document.getElementById("corpo").appendChild(tagMain);
+
+        //-------------------------------------------------------- 3
+        let sectionM = document.createElement('section');
+        sectionM.className = 'center-content';
+        document.querySelector('.main-content').appendChild(sectionM);
+
+        //-------------------------------------------------------- 4
+        let paragraph = document.createElement('p');
+        paragraph.innerText = "Algum texto aqui!"
+        document.querySelector('.center-content').appendChild(paragraph);0
+
+         //-------------------------------------------------------- 5
+         let sectionLeft = document.createElement('section');
+         sectionLeft.className = 'left-content';
+         document.querySelector('.main-content').appendChild(sectionLeft);
+
+         //-------------------------------------------------------- 6
+         let sectionRight = document.createElement('section');
+         sectionRight.className = 'right-content';
+         document.querySelector('.main-content').appendChild(sectionRight);
+
+         //-------------------------------------------------------- 7
+         let imagemSrc = document.createElement('img');
+         imagemSrc.src = 'https://picsum.photos/200';
+         imagemSrc.className = 'small-image';
+         document.querySelector('.left-content').appendChild(imagemSrc);
+
+        //-------------------------------------------------------- 8
+        let listOl = document.createElement('ul');
+        listOl.className = 'lista-n-ordenada';
+        document.querySelector('.right-content').appendChild(listOl);
+        let listItem= ['um','dois','três','quatro','cinco','seis','sete','oito','nove','dez'];
+
+        for(let index = 0; index < listItem.length; index += 1){
+            let item = listItem[index];
+            let listItens = document.createElement('li');
+            listItens.innerText = item;
+            document.querySelector('.lista-n-ordenada').appendChild(listItens);
+        }
+
+        //-------------------------------------------------------- 9
+        for(let cont = 0; cont < 3; cont += 1){
+            let hMain = document.createElement('h1');
+            hMain.className ='description';  //--------------------- 2 (REMOÇÃO)
+            document.querySelector('.main-content').appendChild(hMain);
+        }
+
+        //-------------------------------------------------------- 1 (REMOÇÃO)
+        escritaH1.className = 'title';
+
+        //-------------------------------------------------------- 3 (REMOÇÃO)
+        tagMain.removeChild(sectionLeft);
+
+        //-------------------------------------------------------- 4 (REMOÇÃO)
+        sectionRight.style.marginRight ='auto';
+
+        //-------------------------------------------------------- 5 (REMOÇÃO)
+        tagMain.style.backgroundColor = "green";
+
+        //-------------------------------------------------------- 6 (REMOÇÃO)
+        listItens.removeChild(item)[11];
+        listItens.removeChild(item)[10];
     </script>
   </body>
 </html>
