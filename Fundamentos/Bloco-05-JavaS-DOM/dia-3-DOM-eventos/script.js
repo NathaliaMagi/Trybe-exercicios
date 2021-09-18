@@ -84,15 +84,56 @@ function changeTextFriday() {
   });
 }
 
-function zoomDate(event) {
- let dayZoom = document.querySelectorAll('.day');
- for (let index = 0; index < dayZoom.length; index += 1){
-  
- }
+// exercício 6
 
- 
+let dayZoom = document.querySelectorAll('#days');
+for (let index = 0; index < dayZoom.length; index += 1) {
+  dayZoom[index].addEventListener('mouseover', addZoom);
+
+  dayZoom[index].addEventListener('mouseout', resetZoom);
 }
 
+function addZoom(event) {
+  event.target.style.fontSize = '25px';
+}
+
+function resetZoom(event) {
+  event.target.style.fontSize = '20px';
+}
+
+// exercício 7
+let mtarefa = document.querySelector('.my-tasks');
+
+function customTasks(tarefa) {
+  let task = document.createElement('span');
+  task.innerHTML = tarefa;
+  mtarefa.appendChild(task);
+}
+
+// exercicio 8
+let div = document.createElement('div');
+function colorCustomTasks(cor) {
+  div.className = 'task';
+  div.style.backgroundColor = cor;
+  mtarefa.appendChild(div);
+}
+
+// exercicio 9 
+function selectedTask(event) {
+    let tarefas = event.target;
+    if(tarefas.classList.contains('selected')) {
+      tarefas.classList.remove('selected');
+    } else {
+      tarefas.classList.add('selected');
+    } 
+}
+
+div.addEventListener('click', selectedTask)
+
+// exercicio 10 
+function addEvent() {
+  
+}
 
 
 createDaysOfTheWeek();
@@ -101,3 +142,6 @@ buttonHoliday('Feriados');
 changeColorHolidays();
 buttonFriday("Sexta-Feira");
 changeTextFriday();
+customTasks('Cozinhar');
+colorCustomTasks('pink')
+
