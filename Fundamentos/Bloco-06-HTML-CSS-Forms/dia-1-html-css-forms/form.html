@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6.1</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="personal-data">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label class="personal">Nome: 
+                <input type="text" name="name" required maxlength="40"> 
+            </label>
+
+            <label class="personal">E-mail:
+                <input type="email" name="e-mail" required maxlength="50">
+            </label>
+
+            <label class="personal">CPF:
+                <input type="text" name="cpf" required maxlength="11">
+            </label>
+
+            <label class="personal">Endereço:
+                <input type="text" name="endereco" required maxlength="200">
+            </label>
+
+            <label for="" class="personal">Cidade:
+                <input type="text" name="cidade" required maxlength="28">
+            </label>
+
+            <label for="estados" class="personal">Estado:</label>
+            <select name="estado" id="estados" required></select> <!-- Criar option de forma dinâmica no js -->
+        </fieldset>
+    </div>
+        <!------------------------------------------------------------------------------------>
+        <div id="last-job">
+            <fieldset>
+                <legend>Dados do último emprego</legend>
+                <label> 
+                    Resumo do Currículo: 
+                    <textarea id="resumo" name="resume" maxlength="1000" required></textarea>
+                </label>
+                <label>Cargo:
+                    <input type="text" maxlength="40" required>
+                </label>
+
+                <label>Descrição do cargo:
+                    <input type="text" maxlength="500" required>
+                </label>
+
+                <label>Data de início:
+                    <input type="text" required> <!-- Realizar as condições no js-->
+                </label>
+            </fieldset>
+        </div>
+
+        <!------------------------------------------------------------------------------------>
+        <div id="btn-form">
+            <input class = "button" type="button" value="Enviar">
+            <input class = "button" type="button" value="Limpar">
+        </div>
+        
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
