@@ -131,9 +131,25 @@ function selectedTask(event) {
 div.addEventListener('click', selectedTask)
 
 // exercicio 10 
-function addEvent() {
-  
+for(let index = 0; index < dayZoom.length; index += 1) {
+  dayZoom[index].addEventListener('click',changeColorDays);
 }
+
+function changeColorDays(event) {
+  alert('entrou');
+  let selecionado = document.querySelector('.selected');
+  let ulDias = document.querySelectorAll('.day');
+  for (let index = 0; index < ulDias.length; index += 1) {
+    if(selecionado.style.backgroundColor === 'pink'){
+      event.target.style.backgroundColor = 'pink';
+    }
+    if(ulDias[index].style.backgroundColor === 'pink'){
+      event.target.style.backgroundColor = 'rgb(238,238,238)';
+    }
+  }
+
+}
+
 
 
 createDaysOfTheWeek();
