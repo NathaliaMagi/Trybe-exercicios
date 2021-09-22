@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#eee7f6;
+}
+
+#tudo{
+  border:1px solid red;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#personal-data, #last-job{
+  padding: 30px;
+  width: 300px;
+}
+
+#fild-data-personal, #fild-job{
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f4f4;
+  color: #766a5c;
+  padding: 30px;
+  border: 2px solid #6438b1;
+}
+
+#btn-form {
+  display: flex;
+  padding: 20px;
+  margin: 20px
+
+}
