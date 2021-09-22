@@ -8,63 +8,74 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <main>
-        <div id="personal-data">
-        <fieldset>
-            <legend>Dados Pessoais</legend>
-            <label class="personal">Nome: 
-                <input type="text" name="name" required maxlength="40"> 
-            </label>
+<main>
+        
+    <form id="tudo">
+        <div id="personal-data"></div>
 
-            <label class="personal">E-mail:
-                <input type="email" name="e-mail" required maxlength="50">
-            </label>
+        <fieldset id="fild-data-personal">
+        <legend>Dados Pessoais</legend>
+        <label class="personal">Nome: 
+            <input type="text" name="name" required maxlength="40"> 
+        </label>
 
-            <label class="personal">CPF:
-                <input type="text" name="cpf" required maxlength="11">
-            </label>
+        <label class="personal">E-mail:
+            <input type="email" name="e-mail" required maxlength="50">
+        </label>
 
-            <label class="personal">Endereço:
-                <input type="text" name="endereco" required maxlength="200">
-            </label>
+        <label class="personal">CPF:
+            <input type="text" name="cpf" required maxlength="11">
+        </label>
 
-            <label for="" class="personal">Cidade:
-                <input type="text" name="cidade" required maxlength="28">
-            </label>
+        <label class="personal">Endereço:
+            <input type="text" name="endereco" required maxlength="200">
+        </label>
 
-            <label for="estados" class="personal">Estado:</label>
-            <select name="estado" id="estados" required></select> <!-- Criar option de forma dinâmica no js -->
+        <label for="" class="personal">Cidade:
+            <input type="text" name="cidade" required maxlength="28">
+        </label>
+
+        <label for="estados" class="personal">Estado:</label>
+        <select name="estado" id="estados" required></select> <!-- Criar option de forma dinâmica no js -->
+
+        <label for="" class="personal"> Tipo de Moradia:</label>
+        <label><input type="radio" id="radio" name="moradia" value="casa" checked required> Casa 
+        </label>
+
+        <label><input type="radio" id="radio" name="moradia" value="apartamento" required> Apartamento
+        </label>
         </fieldset>
     </div>
         <!------------------------------------------------------------------------------------>
-        <div id="last-job">
-            <fieldset>
-                <legend>Dados do último emprego</legend>
-                <label> 
-                    Resumo do Currículo: 
-                    <textarea id="resumo" name="resume" maxlength="1000" required></textarea>
-                </label>
-                <label>Cargo:
-                    <input type="text" maxlength="40" required>
-                </label>
+    <div id="last-job">
+        <fieldset id="fild-job">
+            <legend>Dados do último emprego</legend>
+            <label> 
+                Resumo do Currículo: 
+                <textarea id="resumo" name="resume" maxlength="1000" required></textarea>
+            </label>
+            
+            <label>Cargo:
+                <input type="text" maxlength="40" required>
+            </label>
 
-                <label>Descrição do cargo:
-                    <input type="text" maxlength="500" required>
-                </label>
+            <label>Descrição do cargo:
+                <input type="text" maxlength="500" required>
+            </label>
 
-                <label>Data de início:
-                    <input type="text" required> <!-- Realizar as condições no js-->
-                </label>
-            </fieldset>
-        </div>
+            <label>Data de início:
+                <input class ="data" type="text" required> <!-- Realizar as condições no js-->
+            </label>
+        </fieldset>
+    </div>
 
-        <!------------------------------------------------------------------------------------>
-        <div id="btn-form">
-            <input class = "button" type="button" value="Enviar">
-            <input class = "button" type="button" value="Limpar">
-        </div>
-        
-    </main>
+    <!------------------------------------------------------------------------------------>
+    <div id="btn-form">
+        <input class = "button1" type="button" value="Enviar">
+        <input class = "button2" type="button" value="Limpar">
+    </div>
+    </form>
+</main>
     <script src="script.js"></script>
 </body>
 </html>
