@@ -15,18 +15,17 @@ console.log(recursiveTernary(5));
 
 // ---------------------------------------------------------------------------------------------------------------
 
-const bigPhrase = (frase) => {
-	const phraseWrap = frase.split(' ');// dividindo a frase a partir dos espaçameto
-	const arraySize = [];
-	for (let index = 0; index < phraseWrap.length; index += 1) {
-		let size = phraseWrap[index].length;
-		arraySize.push(size);
+const longestWord = (frase) => {
+	let fraseTeste = frase.split(' ');
+	let maiorPalavra = fraseTeste[0];
+	for (let index = 1; index < fraseTeste.length; index += 1) {
+	  if (maiorPalavra.length < fraseTeste[index].length) {
+		maiorPalavra = fraseTeste[index];
+	  }
 	}
-	const crescente = arraySize.sort((a, b) => a - b); // coloca os elementos em ordem crescente
-	console.log(`A maior palavra recebida da frase é : ${crescente.pop()}`);
-}
-
-bigPhrase("Antônio foi no banheiro e otorrinolaringologista sabemos o que aconteceu");
+	return maiorPalavra;
+  }
+  console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"));
 
 // ---------------------------------------------------------------------------------------------------------------
 const btn = document.querySelector('#btn');
@@ -42,5 +41,17 @@ const countButton = () => {
 countButton();
 
 // ---------------------------------------------------------------------------------------------------------------
+const foundX = (text, word) => {
+	let newText = text.replace('x', word);
+	return newText;
+}
+console.log(foundX('Robson é x', 'demais'));
 
+// ---------------------------------------------------------------------------------
 
+const concatStrings = (word) => {
+	word = word.split(' ');
+	let frase = word.sort();
+	return frase;
+}
+console.log( concatStrings('HTML, CSS, JS, Java, Bootstrap'));
