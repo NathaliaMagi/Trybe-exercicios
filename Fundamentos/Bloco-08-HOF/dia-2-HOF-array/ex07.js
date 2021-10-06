@@ -65,16 +65,15 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-const expectedResult = false;
+let expectedResult = false;
 
 function authorUnique() {
-  
-  books.forEach((book) => {
-    let year = book.author.birthYear;
-    if(year !== book.author.birthYear){
-      
-    }
+  expectedResult = books.every((book) => {
+    book.author.birthYear === book.author.birthYear
   });
+  return expectedResult;
 }
+
+console.log(authorUnique());
 
 assert.strictEqual(authorUnique(), expectedResult);
